@@ -1,4 +1,3 @@
-package org.Tema01;
 /// Se define la clase Node como genérica, de modo que pueda almacenar cualquier valor
 
 

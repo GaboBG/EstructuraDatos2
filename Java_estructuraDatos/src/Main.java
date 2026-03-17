@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+        BinarySearchTree<Persona> bst = new BinarySearchTree<>();
+
+        bst.insert(new Persona("Ana", 30));
+        bst.insert(new Persona("Luis", 25));
+        bst.insert(new Persona("Carlos", 35));
+        bst.insert(new Persona("Bea", 28));
+
+        System.out.println("Recorrido inorden:");
+        bst.inOrderTraversal();
+
+        System.out.println("\n¿Contiene a Luis (25)? " + bst.contains(new Persona("Luis", 25)));
+
+        System.out.println("\nEliminando a Ana (30)...");
+        bst.delete(new Persona("Ana", 30));
+
+        System.out.println("\nRecorrido inorden después de eliminar:");
+        bst.inOrderTraversal();
+
+        System.out.println("\nTamaño del árbol: " + bst.size());
+
     }
 }

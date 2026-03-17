@@ -1,6 +1,3 @@
-package org.Tema01;
-
-
 // persona implementa clase Comparable. Se ordena por edad dentrol árbol
 public class Persona implements Comparable<Persona> {
 
